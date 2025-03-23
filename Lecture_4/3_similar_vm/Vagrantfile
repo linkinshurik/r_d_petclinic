@@ -1,0 +1,19 @@
+def configure_vm(vm, hostname)
+    vm.vm.box = "bento/ubuntu-24.04"
+    vm.vm.hostname = hostname
+    vm.vm.network "public_network", type: "dhcp"
+    vm.vm.synced_folder "./shared_vm", "/vagrant_shared"
+    
+    vm.vm.provision "shell", inline: <<-SHELL
+      sudo apt update -y
+      sudo apt install -y nginx
+    SHELL
+  end
+  
+  Vagrant.configure("2") do |config|
+    %w[vm1 vm2 vm3].each do |name|
+      config.vm.define name do |vm|
+        configure_vm(vm, name)
+      end
+    end
+  end
