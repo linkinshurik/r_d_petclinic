@@ -1,0 +1,29 @@
+Vagrant.configure("2") do |config|
+    config.vm.define "vm1" do |vm1|
+      vm1.vm.box = "bento/ubuntu-24.04"
+      vm1.vm.hostname = "webserver"
+      vm1.vm.network "public_network", type: "dhcp"
+      vm1.vm.synced_folder "./shared_vm1", "/vagrant_shared"
+  
+      vm1.vm.provision "shell", inline: <<-SHELL
+        sudo apt update -y
+        sudo apt install -y nginx
+      SHELL
+    end
+  
+    config.vm.define "vm2" do |vm2|
+      vm2.vm.box = "bento/ubuntu-24.04"
+      vm2.vm.hostname = "private-server"
+      vm2.vm.network "private_network", ip: "192.168.2.130"
+      vm2.vm.synced_folder "./shared_vm2", "/vagrant_shared"
+  
+      vm2.vm.provision "shell", path: "provision_vm2.sh"
+    end
+  
+    config.vm.define "vm3" do |vm3|
+      vm3.vm.box = "bento/ubuntu-24.04"
+      vm3.vm.hostname = "public-static-server"
+      vm3.vm.network "public_network", ip: "192.168.1.114", bridge: "en0: Wi-Fi"
+      vm3.vm.synced_folder "./shared_vm3", "/vagrant_shared"
+    end
+  end
