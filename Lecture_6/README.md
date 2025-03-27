@@ -1,18 +1,18 @@
-Встановлення з офіційного репозиторію
+- Встановлення з офіційного репозиторію
 `sudo apt update`
 `sudo apt install -y nginx`
 
-Встановлення PPA nginx
+- Встановлення PPA nginx
 `sudo add-apt-repository ppa:nginx/stable`
 
 Видало помилку:
 `E: The repository 'https://ppa.launchpadcontent.net/nginx/stable/ubuntu noble Release' does not have a Release file.`
 
-Встановив ppa-purge
+- Встановив ppa-purge
 `sudo apt install ppa-purge`
 `sudo ppa-purge -y ppa:nginx/stable - також виводить помилку does not have a Release file.`
 
-Оновив nginx
+- Оновив nginx
 `sudo apt upgrade -y nginx`
 
 `nginx -v`
@@ -20,15 +20,15 @@
 
 ###
 
-Створення власного сервісу systemd
+- Створення власного сервісу systemd
 `vim timestamp.sh `
 ```
 #!/bin/bash
 echo "$(date)" >> /home/vagrant/timestamp.log
 ```
-Надання прав на виконання
+- Надання прав на виконання
 `chmod 777 timestamp.sh`
-Створення systemd сервісу
+- Створення systemd сервісу
 `sudo vim /etc/systemd/system/timestamp.service`
 ```
 [Unit]
@@ -38,7 +38,7 @@ Description=Timestamp writer service
 Type=simple
 ExecStart=/home/vagrant/timestamp.sh
 ```
-Створення таймеру, щохвилини
+- Створення таймеру, щохвилини
 `sudo vim /etc/systemd/system/timestamp.timer`
 ```
 [Unit]
@@ -51,11 +51,11 @@ OnCalendar=*-*-* *:*:00
 WantedBy=timers.target
 ```
 
-Перезавантажуємо systemctl
+- Перезавантажуємо systemctl
 `sudo systemctl daemon-reload`
-Запуск сервісу
+- Запуск сервісу
 `sudo systemctl start timestamp.timer`
-Перевірити роботу:
+- Перевірити роботу
 `sudo systemctl status timestamp.timer`
 ● timestamp.timer - Run timestamp service every minute
      Loaded: loaded (/etc/systemd/system/timestamp.timer; enabled; preset: enabled)
@@ -68,4 +68,67 @@ Mar 27 22:17:01 vm1 systemd[1]: Started timestamp.timer - Run timestamp service 
 Thu Mar 27 21:49:19 UTC 2025 - вручну запущений скрипт
 Thu Mar 27 10:17:01 PM UTC 2025 - робота сервісу
 Thu Mar 27 10:18:10 PM UTC 2025
+
+
+###
+
+Додавання диску
+- вимикаємо VM
+- створюємо новий віртуальний диск на 1гб
+`lsblk`
+- бачимно новий диск sdb
+```
+vagrant@vm1:~$ sudo fdisk /dev/sdb
+
+Welcome to fdisk (util-linux 2.39.3).
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+Device does not contain a recognized partition table.
+Created a new DOS (MBR) disklabel with disk identifier 0x23c3ac94.
+
+Command (m for help): n
+Partition type
+   p   primary (0 primary, 0 extended, 4 free)
+   e   extended (container for logical partitions)
+Select (default p): p
+Partition number (1-4, default 1): 
+First sector (2048-2097151, default 2048): 
+Last sector, +/-sectors or +/-size{K,M,G,T,P} (2048-2097151, default 2097151): 
+
+Created a new partition 1 of type 'Linux' and of size 1023 MiB.
+
+Command (m for help): w
+The partition table has been altered.
+Calling ioctl() to re-read partition table.
+Syncing disks.
+```
+- Форматуємо диск
+`sudo mkfs.ext4 /dev/sdb`
+- Створюємо директорію для монтування
+`sudo mkdir /mnt/sdb`
+- Монтуємо
+`sudo mount /dev/sdb1 /mnt/sdb`
+- Перевіряємо
+```
+df -h
+Filesystem                         Size  Used Avail Use% Mounted on
+tmpfs                              298M 1016K  297M   1% /run
+/dev/mapper/ubuntu--vg-ubuntu--lv   31G  4.6G   25G  16% /
+tmpfs                              1.5G     0  1.5G   0% /dev/shm
+tmpfs                              5.0M     0  5.0M   0% /run/lock
+/dev/sda2                          2.0G  142M  1.7G   8% /boot
+tmpfs                              298M   12K  298M   1% /run/user/1000
+/dev/sdb1                          989M   24K  922M   1% /mnt/sdb
+```
+- Редагуємо для автоматичного монтування fstab
+`sudo vim /etc/fstab`
+- Додаємо
+`/dev/sdb1  /mnt/sdb  ext4  defaults  0  2`
+- Перезавантажужмо, диск залишається підмонтованим
+
+
+
+
+
 
