@@ -65,11 +65,67 @@ WantedBy=timers.target
 
 Mar 27 22:17:01 vm1 systemd[1]: Started timestamp.timer - Run timestamp service every minute.
 `tail -f timestamp.log`
-Thu Mar 27 21:49:19 UTC 2025 - вручну запущений скрипт
-Thu Mar 27 10:17:01 PM UTC 2025 - робота сервісу
+Thu Mar 27 21:49:19 UTC 2025 #вручну запущений скрипт
+Thu Mar 27 10:17:01 PM UTC 2025 #робота сервісу
 Thu Mar 27 10:18:10 PM UTC 2025
 
 
+###
+
+Iptables
+
+VM1 -> 10.0.2.15
+Personal host -> 192.168.1.146
+
+sudo iptables -A INPUT -p tcp -s 10.0.2.15 --dport 22 -j ACCEPT
+sudo iptables -A INPUT -p tcp -s 192.168.1.146 --dport 22 -j DROP
+
+- Підключався з Personal host. Одразу відпало зєднання. Після перезавантаження відновилось. Для того щоб зберегти потрібно
+
+sudo iptables -A INPUT -p tcp -s 10.0.2.15 --dport 22 -j DROP
+sudo iptables -A INPUT -p tcp -s 192.168.1.146 --dport 22 -j ACCEPT
+
+`sudo apt install iptables-persistent -y`
+`sudo netfilter-persistent save`
+
+```
+run-parts: executing /usr/share/netfilter-persistent/plugins.d/15-ip4tables save
+run-parts: executing /usr/share/netfilter-persistent/plugins.d/25-ip6tables save
+```
+
+- Налаштування fail2ban
+
+`sudo apt install fail2ban -y`
+- конфіг
+```
+[sshd]
+enabled = true
+port = ssh
+maxretry = 3
+bantime = 3600
+findtime = 600
+logpath = /var/log/auth.log
+```
+
+- Перезапустити
+`sudo systemctl restart fail2ban`
+`sudo systemctl enable fail2ban`
+- Після невдалих спроб
+ssh: connect to host 192.168.1.97 port 22: Connection refused
+
+- Який вивід можна переглянути
+`sudo fail2ban-client status sshd`
+```
+Status for the jail: sshd
+|- Filter
+|  |- Currently failed:	1
+|  |- Total failed:	2
+|  `- Journal matches:	_SYSTEMD_UNIT=sshd.service + _COMM=sshd
+`- Actions
+   |- Currently banned:	0
+   |- Total banned:	0
+   `- Banned IP list:	
+```
 ###
 
 Додавання диску
