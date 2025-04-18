@@ -6,8 +6,8 @@ services:
     container_name: school-db
     restart: always
     environment:
-      POSTGRES_USER: root
-      POSTGRES_PASSWORD: root
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
       POSTGRES_DB: SchoolDB
     ports:
       - "5432:5432"
