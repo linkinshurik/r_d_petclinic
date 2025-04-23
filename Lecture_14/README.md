@@ -14,4 +14,5 @@ fixtures/memberships.js
 fixtures/workouts.js
 fixtures/trainers.js
 
-## 
+## Запити:
+requests.js
