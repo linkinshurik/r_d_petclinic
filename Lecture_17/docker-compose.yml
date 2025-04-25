@@ -22,6 +22,17 @@ services:
     networks:
       - appnet
 
+  proxy:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./proxy/nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - web
+    networks:
+      - appnet
+
 volumes:
   db-data:
   web-data:

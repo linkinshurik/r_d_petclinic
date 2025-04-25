@@ -50,3 +50,8 @@ lecture_17-db-1      postgres:latest   "docker-entrypoint.s…"   db        25 m
 lecture_17-web-1     nginx:latest      "/docker-entrypoint.…"   web       4 seconds ago    Up 3 seconds    80/tcp
 lecture_17-web-2     nginx:latest      "/docker-entrypoint.…"   web       4 seconds ago    Up 3 seconds    80/tcp
 lecture_17-web-3     nginx:latest      "/docker-entrypoint.…"   web       4 seconds ago    Up 3 seconds    80/tcp
+
+## Додавання проксі для балансування навантаження між web серверами
+- додано конфіг proxy/nginx.conf
+- додано proxy в docker-compose та мапінг портів
+- localhost знову доступний
