@@ -64,3 +64,8 @@ falco-dhfg6   1/1     Running   0          4m9s
 2025-05-23T19:35:05+0000: Enabled event sources: syscall
 2025-05-23T19:35:05+0000: Opening 'syscall' source with modern BPF probe.
 2025-05-23T19:35:05+0000: One ring buffer every '2' CPUs.
+
+`kubectl get pods`
+NAME      READY   STATUS    RESTARTS   AGE
+redis-0   1/1     Running   0          12m
+redis-1   1/1     Running   0          17m
