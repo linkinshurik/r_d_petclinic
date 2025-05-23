@@ -48,6 +48,19 @@ falco-daemonset.yaml
 
 Falco з'явився в Daemon Sets в неймспейсі `kube-system` в Lens
 або команда
-`kubectl get pods -n kube-system -l app=falco`
+`kubectl get pods -l app=falco -n kube-system`
 NAME          READY   STATUS    RESTARTS   AGE
-falco-dhfg6   1/1     Running   0          3m3s
+falco-dhfg6   1/1     Running   0          4m9s
+
+# Виконайте команду для перегляду логів одного з подів Falco
+`kubectl logs -l app=falco -n kube-system`
+2025-05-23T19:35:03+0000: System info: Linux version 6.10.14-linuxkit (root@buildkitsandbox) (gcc (Alpine 13.2.1_git20240309) 13.2.1 20240309, GNU ld (GNU Binutils) 2.42) #1 SMP PREEMPT_DYNAMIC Thu Mar 20 16:36:58 UTC 2025
+2025-05-23T19:35:03+0000: Loading rules from:
+2025-05-23T19:35:04+0000:    /etc/falco/falco_rules.yaml | schema validation: ok
+2025-05-23T19:35:05+0000:    /etc/falco/falco_rules.local.yaml | schema validation: none
+2025-05-23T19:35:05+0000: The chosen syscall buffer dimension is: 8388608 bytes (8 MBs)
+2025-05-23T19:35:05+0000: Starting health webserver with threadiness 8, listening on 0.0.0.0:8765
+2025-05-23T19:35:05+0000: Loaded event sources: syscall
+2025-05-23T19:35:05+0000: Enabled event sources: syscall
+2025-05-23T19:35:05+0000: Opening 'syscall' source with modern BPF probe.
+2025-05-23T19:35:05+0000: One ring buffer every '2' CPUs.
