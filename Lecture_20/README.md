@@ -5,13 +5,13 @@ minikube start
 
 # 1. Створіть PersistentVolumeClaim (PVC) для зберігання даних Redis. Кожен под у StatefulSet використовуватиме свій окремий том для зберігання даних.
 redis-statefulset.yaml
-`kubectl apply -f redis-statefulset.yaml`
+`kubectl apply -f redis-pvc.yaml`
 
 В результаті маємо 2 інстанси в Stateful Sets
 
 # 2. Створіть StatefulSet для Redis із налаштуваннями для запуску двох реплік. Кожна репліка повинна мати стабільне ім’я та доступ до постійного тому.
 redis-statefulset-2.yaml
-`kubectl apply -f redis-statefulset-2.yaml`
+`kubectl apply -f redis-statefulset.yaml`
 
 # 3. Створіть Service для Redis: Service для StatefulSet потрібен для доступу до Redis. Використовуйте тип Service ClusterIP для внутрішньої взаємодії між подами.
 redis-service.yaml
@@ -25,4 +25,18 @@ kubectl get pods
 NAME      READY   STATUS    RESTARTS   AGE
 redis-0   1/1     Running   0          66m
 redis-1   1/1     Running   0          66m
+
+Підключаємось до редісу
+`kubectl exec -it redis-0 -- redis-cli`
+
+127.0.0.1:6379> SET test 123
+OK
+127.0.0.1:6379> GET test
+"123"
+
+Перезавантажуємо поду 
+`kubectl delete pod redis-0`
+`kubectl exec -it redis-0 -- redis-cli`
+127.0.0.1:6379> GET test
+"123"
 
