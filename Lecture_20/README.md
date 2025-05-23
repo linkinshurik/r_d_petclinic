@@ -40,3 +40,14 @@ OK
 127.0.0.1:6379> GET test
 "123"
 
+# 2. Завдання
+Файл конфігурації
+falco-daemonset.yaml
+
+`kubectl apply -f falco-daemonset.yaml`
+
+Falco з'явився в Daemon Sets в неймспейсі `kube-system` в Lens
+або команда
+`kubectl get pods -n kube-system -l app=falco`
+NAME          READY   STATUS    RESTARTS   AGE
+falco-dhfg6   1/1     Running   0          3m3s
