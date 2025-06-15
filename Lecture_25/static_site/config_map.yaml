@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: site-content
+  labels:
+    app: static-web
+
+data:
+  index.html: |
+    <!doctype html>
+    <html>
+      <head><title>Book‑Tracker</title></head>
+      <body style="font-family:sans-serif;text-align:center">
+        <h1>Welcome to EKS</h1>
+        <p>Status page served by nginx.</p>
+      </body>
+    </html>
