@@ -3,17 +3,29 @@
 Створив VPC, та 2 підмережі в двох різних регіонах
 Створив користувача IAM та додав йому необхідних прав
 Створив node group з двох нод 
+    Отримав помилку. Перестворення нод груп чи самого кластера - не дало результатів.
+
+    NodeCreationFailure Instances failed to join the kubernetes cluster
+        i-0c20a745ce0539c4e
+        i-0c292abe4fb9bc49a
 
 ## 1. Налаштувати kubectl для доступу до кластера
 Оновив кубконфіг
 `aws eks update-kubeconfig --name wh-k8s --region us-east-1`
-Результат виводу `kubectl get nodes`
+Доступ присутній. Але нод по причині описаній вище - немає :(
+Далі вирішив продовжувати з minikube
 
 ## 3. Розгорнути статичний вебсайт
 Створення 
-`static_site/config_map.yaml`
-`static_site/deployment.yaml`
-`static_site/service.yaml`
+`kubectl apply -f static_site/config_map.yaml`
+`kubectl apply -f static_site/deployment.yaml`
+`kubectl apply -f static_site/service.yaml`
+
+Отримати IP
+`kubectl get svc static-web`
+static-web   LoadBalancer   10.111.15.80   <pending>     80:31331/TCP   100s
+для мого сценарію
+`minikube service static-web`
 
 ## 4. Створити PersistentVolumeClaim для збереження даних
 `percistent_volume/storage.yaml`

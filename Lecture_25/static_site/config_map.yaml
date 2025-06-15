@@ -11,7 +11,7 @@ data:
     <html>
       <head><title>Book‑Tracker</title></head>
       <body style="font-family:sans-serif;text-align:center">
-        <h1>Welcome to Book‑Tracker on EKS ✨</h1>
+        <h1>Welcome to EKS</h1>
         <p>Status page served by nginx.</p>
       </body>
     </html>
