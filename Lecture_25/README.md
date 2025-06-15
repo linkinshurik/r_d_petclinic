@@ -28,32 +28,38 @@ static-web   LoadBalancer   10.111.15.80   <pending>     80:31331/TCP   100s
 `minikube service static-web`
 
 ## 4. Створити PersistentVolumeClaim для збереження даних
-`percistent_volume/storage.yaml`
-`percistent_volume/pvc.yaml`
-`percistent_volume/pod.yaml`
+`kubectl apply -f persistent_volume/storage.yaml`
+`kubectl apply -f persistent_volume/pvc.yaml`
+`kubectl apply -f persistent_volume/pod.yaml`
+Перевірка
+`kubectl exec pvc-tester -- tail /data/out.txt`
+Sun Jun 15 13:54:40 UTC 2025
 
 ## 5. Запуск завдання за допомогою Job
-`job/job.yaml`
+`kubectl apply -f job/job.yaml`
+Перевірка
+`kubectl logs job/hello-job`
+Hello from EKS!
 
 ## 6. Розгорнути тестовий застосунок
-`app/deployment.yaml`
-`app/service.yaml`
+`kubectl apply -f app/deployment.yaml`
+`kubectl apply -f app/service.yaml`
+Перевірка
+`kubectl get pods -l app=apache-demo`
+apache-demo-55bbd658bb-d6jf9   1/1     Running   0          22s   10.244.0.7   minikube   <none>           <none>
+apache-demo-55bbd658bb-pwjbl   1/1     Running   0          22s   10.244.0.6   minikube   <none>           <none>
 
 ## 7. Робота з неймспейсами
-
+`kubectl apply -f namespaces/namespace.yaml`
+`kubectl apply -f namespaces/deployment.yaml`
+Перевірка
+`kubectl -n dev get pods`
+NAME                       READY   STATUS    RESTARTS   AGE
+sleeper-7cf565f598-8gpbt   1/1     Running   0          16s
+sleeper-7cf565f598-c99qt   1/1     Running   0          16s
+sleeper-7cf565f598-ngwcs   1/1     Running   0          16s
+sleeper-7cf565f598-r8fvf   1/1     Running   0          16s
+sleeper-7cf565f598-rwdzd   1/1     Running   0          16s
 ## 8. Очистити ресурси
 
-kubectl apply -f manifests/
-watch -n2 kubectl get svc static-web
-
-kubectl apply -f manifests/data-pvc.yaml -f manifests/pvc-tester-pod.yaml
-kubectl exec pvc-tester -- tail /data/out.txt
-
-kubectl apply -f manifests/hello-job.yaml
-kubectl logs job/hello-job            
-
-kubectl apply -f manifests/apache-deployment.yaml -f manifests/apache-service.yaml
-kubectl get pods -l app=apache-demo -o wide
-
-kubectl apply -f manifests/dev-namespace.yaml -f manifests/sleeper-deployment.yaml
-kubectl -n dev get pods
+EKS кластер, Node group, VPC, subnets - видалено
