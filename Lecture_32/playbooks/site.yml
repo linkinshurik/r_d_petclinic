@@ -1,0 +1,6 @@
+- hosts: hw32-site
+  become: yes
+  roles:
+    - baseline
+    - firewall
+    - nginx

@@ -1,0 +1,4 @@
+- hosts: hw32-site
+  become: yes
+  roles:
+    - nginx

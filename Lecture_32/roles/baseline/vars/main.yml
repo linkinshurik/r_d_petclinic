@@ -1,0 +1,6 @@
+baseline_packages:
+  - vim
+  - git
+  - mc
+  - ufw
+ssh_user: ubuntu

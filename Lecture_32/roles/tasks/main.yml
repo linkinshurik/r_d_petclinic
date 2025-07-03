@@ -1,0 +1,19 @@
+- name: Install base packages
+  apt:
+    name: "{{ baseline_packages }}"
+    state: present
+    update_cache: yes
+
+- name: Ensure ~/.ssh exists
+  file:
+    path: "/home/{{ ssh_user }}/.ssh"
+    state: directory
+    owner: "{{ ssh_user }}"
+    mode: '0700'
+
+- name: Add team authorized_keys
+  copy:
+    src: authorized_keys
+    dest: "/home/{{ ssh_user }}/.ssh/authorized_keys"
+    owner: "{{ ssh_user }}"
+    mode: '0600'
