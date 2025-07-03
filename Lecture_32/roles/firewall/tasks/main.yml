@@ -1,0 +1,15 @@
+- name: Allow SSH
+  ufw:
+    rule: allow
+    port: "22"
+
+- name: Allow HTTP/HTTPS
+  ufw:
+    rule: allow
+    port: "{{ item }}"
+  loop: ["80", "443"]
+
+- name: Enable UFW
+  ufw:
+    state: enabled
+    logging: on

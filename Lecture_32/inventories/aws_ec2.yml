@@ -1,0 +1,11 @@
+plugin: amazon.aws.aws_ec2
+regions:
+  - eu-central-1
+keyed_groups:
+  - prefix: aws_tag
+    key: tags
+hostnames:
+  - tag:Name
+  - dns-name
+filters:
+  "tag:Environment": "prod"   # приклад
