@@ -1,11 +1,10 @@
 plugin: amazon.aws.aws_ec2
-regions:
-  - eu-central-1
-keyed_groups:
-  - prefix: aws_tag
-    key: tags
+regions: [us-east-1]
+
 hostnames:
   - tag:Name
-  - dns-name
-filters:
-  "tag:Environment": "prod"   # приклад
+
+compose:
+  ansible_host: public_ip_address
+  ansible_user: "'ubuntu'" #оце просто всратий запис, але без нього не працює
+  ansible_ssh_private_key_file: "'~/Documents/hw32.pem'"
