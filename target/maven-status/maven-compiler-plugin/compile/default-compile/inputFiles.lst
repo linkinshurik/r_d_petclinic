@@ -11,11 +11,13 @@
 /Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/java/org/springframework/samples/petclinic/owner/PetController.java
 /Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/java/org/springframework/samples/petclinic/owner/PetType.java
 /Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/java/org/springframework/samples/petclinic/owner/PetTypeFormatter.java
+/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/java/org/springframework/samples/petclinic/owner/PetTypeRepository.java
 /Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/java/org/springframework/samples/petclinic/owner/PetValidator.java
 /Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/java/org/springframework/samples/petclinic/owner/Visit.java
 /Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/java/org/springframework/samples/petclinic/owner/VisitController.java
 /Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/java/org/springframework/samples/petclinic/system/CacheConfiguration.java
 /Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/java/org/springframework/samples/petclinic/system/CrashController.java
+/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/java/org/springframework/samples/petclinic/system/WebConfiguration.java
 /Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/java/org/springframework/samples/petclinic/system/WelcomeController.java
 /Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/java/org/springframework/samples/petclinic/vet/Specialty.java
 /Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/java/org/springframework/samples/petclinic/vet/Vet.java

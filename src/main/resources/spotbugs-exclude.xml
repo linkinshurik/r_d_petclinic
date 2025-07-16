@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FindBugsFilter>
+    <!-- Exclude EI_EXPOSE_REP for JPA Entity getters as they need to return actual entity references for JPA to work properly -->
+    <Match>
+        <Class name="org.springframework.samples.petclinic.owner.Pet"/>
+        <Method name="getType"/>
+        <Bug pattern="EI_EXPOSE_REP"/>
+    </Match>
+    
+    <!-- Exclude EI_EXPOSE_REP2 for JPA Entity setters as they need to store actual entity references for JPA to work properly -->
+    <Match>
+        <Class name="org.springframework.samples.petclinic.owner.Pet"/>
+        <Method name="setType"/>
+        <Bug pattern="EI_EXPOSE_REP2"/>
+    </Match>
+    
+    <!-- Exclude EI_EXPOSE_REP for collections that need to be mutable for JPA/ORM and existing API contracts -->
+    <Match>
+        <Class name="org.springframework.samples.petclinic.owner.Owner"/>
+        <Method name="getPets"/>
+        <Bug pattern="EI_EXPOSE_REP"/>
+    </Match>
+    
+    <Match>
+        <Class name="org.springframework.samples.petclinic.owner.Pet"/>
+        <Method name="getVisits"/>
+        <Bug pattern="EI_EXPOSE_REP"/>
+    </Match>
+    
+    <Match>
+        <Class name="org.springframework.samples.petclinic.vet.Vets"/>
+        <Method name="getVetList"/>
+        <Bug pattern="EI_EXPOSE_REP"/>
+    </Match>
+</FindBugsFilter>

@@ -78,8 +78,12 @@ public class Pet extends NamedEntity {
 		return this.visits;
 	}
 
+	public Collection<Visit> getVisitsImmutable() {
+		return new LinkedHashSet<>(this.visits);
+	}
+
 	public void addVisit(Visit visit) {
-		getVisits().add(visit);
+		this.visits.add(visit);
 	}
 
 }
