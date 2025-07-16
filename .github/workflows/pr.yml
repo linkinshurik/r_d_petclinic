@@ -1,0 +1,36 @@
+name: PR-CI
+on: [pull_request]
+
+env:
+  IMAGE: docker.io/${{ secrets.DOCKERHUB_USER }}/petclinic:${{ github.sha }}
+
+jobs:
+  build-test-static:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - uses: actions/setup-java@v4
+      with: { distribution: temurin, java-version: 21 }
+
+    # 1. Статичний аналіз (SpotBugs)
+    - name: SpotBugs
+      run: ./mvnw -B spotbugs:check
+
+    # 2. Юніт‑тести
+    - name: Unit tests
+      run: ./mvnw -B test
+
+    # 3. Package JAR (артефакт для GH Actions)
+    - name: Package
+      run: ./mvnw -B package -DskipTests
+    - uses: actions/upload-artifact@v4
+      with: { name: petclinic-jar, path: target/*.jar }
+
+    # 4. Build & push Docker image з SHA‑тегом
+    - name: Build & push image
+      run: |
+        docker build -t $IMAGE .
+        echo ${{ secrets.DOCKERHUB_PWD }} | docker login -u ${{ secrets.DOCKERHUB_USER }} --password-stdin
+        docker push $IMAGE

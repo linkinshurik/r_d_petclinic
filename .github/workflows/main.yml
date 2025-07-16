@@ -1,0 +1,89 @@
+name: Release
+on:
+  push:
+    branches: [main]
+
+env:
+  REGISTRY: docker.io/${{ secrets.DOCKERHUB_USER }}
+
+jobs:
+  bump-tag-build:
+    runs-on: ubuntu-latest
+    outputs:
+      tag: ${{ steps.bump.outputs.TAG }}
+
+    steps:
+    - uses: actions/checkout@v4
+      with: { fetch-depth: 0 }          # потрібна історія для tags
+
+    - name: Install semver
+      run: pip install semver==3.0.2
+
+    # 1. Bump minor версію → vX.Y.Z
+    - id: bump
+      run: |
+        PY='import json,semver,sys,os;v=json.load(open("version.json"))["version"];n=str(semver.Version.parse(v).bump_minor());json.dump({"version":n},open("version.json","w"));print(f"TAG={n}")'
+        python - << "$PY"
+        $PY
+        echo "TAG=$(jq -r .version version.json)" >> $GITHUB_OUTPUT
+
+    # 2. Commit + Git‑tag
+    - uses: EndBug/add-and-commit@v9
+      with:
+        message: "ci: release ${{ steps.bump.outputs.TAG }}"
+        tag: "v${{ steps.bump.outputs.TAG }}"
+
+    - uses: actions/setup-java@v4
+      with: { distribution: temurin, java-version: 21 }
+
+    # 3. Build jar & image з SemVer тегом
+    - name: Build JAR
+      run: ./mvnw -B package -DskipTests
+    - name: Build & push image
+      run: |
+        IMAGE=$REGISTRY/petclinic:${{ steps.bump.outputs.TAG }}
+        docker build -t $IMAGE .
+        echo ${{ secrets.DOCKERHUB_PWD }} | docker login -u ${{ secrets.DOCKERHUB_USER }} --password-stdin
+        docker push $IMAGE
+    - uses: actions/upload-artifact@v4
+      with: { name: petclinic-${{ steps.bump.outputs.TAG }}.jar, path: target/*.jar }
+
+  ### --- ручне прод‑розгортання ---
+  deploy:
+    needs: bump-tag-build
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: https://<ALB_DNS_NAME>
+    inputs:
+      reason:
+        description: "Поясніть, що змінюєте"
+        required: true
+    steps:
+    - name: Install ssh-client
+      run: sudo apt-get update && sudo apt-get install -y openssh-client
+
+    # 4. Ключ для SSH
+    - name: Add SSH key
+      run: |
+        echo "${{ secrets.EC2_SSH_KEY }}" | base64 -d > id_key
+        chmod 600 id_key
+        echo "StrictHostKeyChecking no" >> ~/.ssh/config
+
+    # 5. Зупинити попередній контейнер, скачати новий, запустити
+    - name: Deploy container
+      run: |
+        TAG=${{ needs.bump-tag-build.outputs.tag }}
+        ssh -i id_key ${{ secrets.EC2_HOST }} "
+          docker stop petclinic || true && docker rm petclinic || true
+          docker pull $REGISTRY/petclinic:$TAG
+          docker run -d --name petclinic -p 8080:8080 \
+            -e SPRING_DATASOURCE_URL='jdbc:mysql://<RDS_ENDPOINT>:3306/petclinic' \
+            -e SPRING_DATASOURCE_USERNAME=admin \
+            -e SPRING_DATASOURCE_PASSWORD='${{ secrets.DB_PWD }}' \
+            $REGISTRY/petclinic:$TAG
+        "
+
+    # 6. Вивести URL
+    - name: Print URL
+      run: echo "App → https://<ALB_DNS_NAME> (version ${{ needs.bump-tag-build.outputs.tag }})"
