@@ -40,11 +40,4 @@ public class Vets {
 		return vets;
 	}
 
-	public List<Vet> getVetListImmutable() {
-		if (vets == null) {
-			vets = new ArrayList<>();
-		}
-		return new ArrayList<>(vets);
-	}
-
 }

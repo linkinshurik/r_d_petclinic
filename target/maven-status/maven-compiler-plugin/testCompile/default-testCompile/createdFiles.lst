@@ -3,6 +3,7 @@ org/springframework/samples/petclinic/system/CrashControllerTests.class
 org/springframework/samples/petclinic/model/ValidatorTests.class
 org/springframework/samples/petclinic/MySqlIntegrationTests.class
 org/springframework/samples/petclinic/owner/VisitControllerTests.class
+org/springframework/samples/petclinic/system/I18nPropertiesSyncTest.class
 org/springframework/samples/petclinic/owner/PetTypeFormatterTests$2.class
 org/springframework/samples/petclinic/service/ClinicServiceTests.class
 org/springframework/samples/petclinic/vet/VetControllerTests.class

@@ -45,8 +45,11 @@ jobs:
         docker build -t $IMAGE .
         echo ${{ secrets.DOCKERHUB_PWD }} | docker login -u ${{ secrets.DOCKERHUB_USER }} --password-stdin
         docker push $IMAGE
+
     - uses: actions/upload-artifact@v4
-      with: { name: petclinic-${{ steps.bump.outputs.TAG }}.jar, path: target/*.jar }
+       with:
+        name: petclinic-${{ steps.bump.outputs.TAG }}.jar
+        path: 'target/*.jar'          # лапки, щоб * не трактувався як anchor
 
   ### --- ручне прод‑розгортання ---
   deploy:

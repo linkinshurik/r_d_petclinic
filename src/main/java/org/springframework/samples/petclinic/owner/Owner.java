@@ -93,13 +93,9 @@ public class Owner extends Person {
 		return this.pets;
 	}
 
-	public List<Pet> getPetsImmutable() {
-		return new ArrayList<>(this.pets);
-	}
-
 	public void addPet(Pet pet) {
 		if (pet.isNew()) {
-			this.pets.add(pet);
+			getPets().add(pet);
 		}
 	}
 

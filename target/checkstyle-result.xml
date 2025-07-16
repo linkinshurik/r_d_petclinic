@@ -1,283 +1,253 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="10.25.0">
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/mvnw.cmd">
-<error line="10" column="10" severity="error" message="http:// URLs are not allowed but got &apos;http://www.apache.org/licenses/LICENSE-2.0&apos;. Use https:// instead." source="io.spring.nohttp.checkstyle.check.NoHttpCheck"/>
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/mvnw.cmd">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/Dockerfile">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/k8s/db.yml">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/k8s/db.yml">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/k8s/petclinic.yml">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/k8s/petclinic.yml">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/pom.xml">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/pom.xml">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/.devcontainer/Dockerfile">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/.devcontainer/Dockerfile">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/.devcontainer/devcontainer.json">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/.devcontainer/devcontainer.json">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/.editorconfig">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/.editorconfig">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/README.md">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/README.md">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/gradle/wrapper/gradle-wrapper.jar">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/gradle/wrapper/gradle-wrapper.jar">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/gradle/wrapper/gradle-wrapper.properties">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/gradle/wrapper/gradle-wrapper.properties">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/gradlew">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/gradlew">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/.gitignore">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/.mvn/wrapper/maven-wrapper.properties">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/.mvn/wrapper/maven-wrapper.properties">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/.mvn/wrapper/maven-wrapper.jar">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/.github/dco.yml">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/.github/dco.yml">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/.github/workflows/deploy-and-test-cluster.yml">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/.github/workflows/pr.yml">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/.github/workflows/gradle-build.yml">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/.github/workflows/main.yml">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/.github/workflows/maven-build.yml">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/build.gradle">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/build.gradle">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/.gitattributes">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/.gitattributes">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/.gradle/buildOutputCleanup/cache.properties">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/.gitpod.yml">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/.gradle/buildOutputCleanup/buildOutputCleanup.lock">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/docker-compose.yml">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/.gradle/8.14.3/gc.properties">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/LICENSE.txt">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/.gradle/8.14.3/fileChanges/last-build.bin">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/mvnw">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/.gradle/8.14.3/checksums/checksums.lock">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/gradlew.bat">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/.gradle/8.14.3/checksums/md5-checksums.bin">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/settings.gradle">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/.gradle/8.14.3/checksums/sha1-checksums.bin">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/checkstyle/nohttp-checkstyle-suppressions.xml">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/.gradle/8.14.3/fileHashes/fileHashes.lock">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/checkstyle/nohttp-checkstyle.xml">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/.gradle/8.14.3/fileHashes/fileHashes.bin">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/test/jmeter/petclinic_test_plan.jmx">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/.gradle/8.10.2/fileChanges/last-build.bin">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/test/java/org/springframework/samples/petclinic/vet/VetTests.java">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/.gradle/8.10.2/checksums/checksums.lock">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/test/java/org/springframework/samples/petclinic/vet/VetControllerTests.java">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/.gradle/8.10.2/fileHashes/fileHashes.lock">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/test/java/org/springframework/samples/petclinic/owner/PetControllerTests.java">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/.gitpod.yml">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/test/java/org/springframework/samples/petclinic/owner/OwnerControllerTests.java">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/docker-compose.yml">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/test/java/org/springframework/samples/petclinic/owner/VisitControllerTests.java">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/LICENSE.txt">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/test/java/org/springframework/samples/petclinic/owner/PetValidatorTests.java">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/.vscode/settings.json">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/test/java/org/springframework/samples/petclinic/owner/PetTypeFormatterTests.java">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/mvnw">
-<error line="11" column="7" severity="error" message="http:// URLs are not allowed but got &apos;http://www.apache.org/licenses/LICENSE-2.0&apos;. Use https:// instead." source="io.spring.nohttp.checkstyle.check.NoHttpCheck"/>
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/test/java/org/springframework/samples/petclinic/system/CrashControllerTests.java">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/gradlew.bat">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/test/java/org/springframework/samples/petclinic/system/I18nPropertiesSyncTest.java">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/settings.gradle">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/test/java/org/springframework/samples/petclinic/system/CrashControllerIntegrationTests.java">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/checkstyle/nohttp-checkstyle-suppressions.xml">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/test/java/org/springframework/samples/petclinic/PetClinicIntegrationTests.java">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/checkstyle/nohttp-checkstyle.xml">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/test/java/org/springframework/samples/petclinic/model/ValidatorTests.java">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/test/jmeter/petclinic_test_plan.jmx">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/test/java/org/springframework/samples/petclinic/MySqlIntegrationTests.java">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/test/java/org/springframework/samples/petclinic/vet/VetTests.java">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/test/java/org/springframework/samples/petclinic/service/EntityUtils.java">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/test/java/org/springframework/samples/petclinic/vet/VetControllerTests.java">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/test/java/org/springframework/samples/petclinic/service/ClinicServiceTests.java">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/test/java/org/springframework/samples/petclinic/owner/PetControllerTests.java">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/test/java/org/springframework/samples/petclinic/MysqlTestApplication.java">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/test/java/org/springframework/samples/petclinic/owner/OwnerControllerTests.java">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/test/java/org/springframework/samples/petclinic/PostgresIntegrationTests.java">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/test/java/org/springframework/samples/petclinic/owner/VisitControllerTests.java">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/scss/petclinic.scss">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/test/java/org/springframework/samples/petclinic/owner/PetValidatorTests.java">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/scss/typography.scss">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/test/java/org/springframework/samples/petclinic/owner/PetTypeFormatterTests.java">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/scss/responsive.scss">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/test/java/org/springframework/samples/petclinic/system/CrashControllerTests.java">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/scss/header.scss">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/test/java/org/springframework/samples/petclinic/system/I18nPropertiesSyncTest.java">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/application-postgres.properties">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/test/java/org/springframework/samples/petclinic/system/CrashControllerIntegrationTests.java">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/messages/messages_de.properties">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/test/java/org/springframework/samples/petclinic/PetClinicIntegrationTests.java">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/messages/messages_ko.properties">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/test/java/org/springframework/samples/petclinic/model/ValidatorTests.java">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/messages/messages_fa.properties">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/test/java/org/springframework/samples/petclinic/MySqlIntegrationTests.java">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/messages/messages_en.properties">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/test/java/org/springframework/samples/petclinic/service/EntityUtils.java">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/messages/messages_pt.properties">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/test/java/org/springframework/samples/petclinic/service/ClinicServiceTests.java">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/messages/messages_es.properties">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/test/java/org/springframework/samples/petclinic/MysqlTestApplication.java">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/messages/messages_tr.properties">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/test/java/org/springframework/samples/petclinic/PostgresIntegrationTests.java">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/messages/messages_ru.properties">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/scss/petclinic.scss">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/messages/messages.properties">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/scss/typography.scss">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/banner.txt">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/scss/responsive.scss">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/static/resources/css/petclinic.css">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/scss/header.scss">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/static/resources/images/spring-logo-dataflow-mobile.png">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/spotbugs-exclude.xml">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/static/resources/images/favicon.png">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/application-postgres.properties">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/static/resources/images/pets.png">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/messages/messages_de.properties">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/static/resources/images/spring-logo.svg">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/messages/messages_ko.properties">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/static/resources/images/spring-logo-dataflow.png">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/messages/messages_fa.properties">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/static/resources/fonts/varela_round-webfont.svg">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/messages/messages_en.properties">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/static/resources/fonts/montserrat-webfont.svg">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/messages/messages_pt.properties">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/static/resources/fonts/montserrat-webfont.woff">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/messages/messages_es.properties">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/static/resources/fonts/varela_round-webfont.woff">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/messages/messages_tr.properties">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/static/resources/fonts/montserrat-webfont.ttf">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/messages/messages_ru.properties">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/static/resources/fonts/varela_round-webfont.ttf">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/messages/messages.properties">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/static/resources/fonts/montserrat-webfont.eot">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/banner.txt">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/static/resources/fonts/varela_round-webfont.eot">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/static/resources/css/petclinic.css">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/db/h2/data.sql">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/static/resources/images/spring-logo-dataflow-mobile.png">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/db/h2/schema.sql">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/static/resources/images/favicon.png">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/db/hsqldb/data.sql">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/static/resources/images/pets.png">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/db/hsqldb/schema.sql">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/static/resources/images/spring-logo.svg">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/db/postgres/data.sql">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/static/resources/images/spring-logo-dataflow.png">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/db/postgres/petclinic_db_setup_postgres.txt">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/static/resources/fonts/varela_round-webfont.svg">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/db/postgres/schema.sql">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/static/resources/fonts/montserrat-webfont.svg">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/db/mysql/data.sql">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/static/resources/fonts/montserrat-webfont.woff">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/db/mysql/schema.sql">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/static/resources/fonts/varela_round-webfont.woff">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/db/mysql/user.sql">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/static/resources/fonts/montserrat-webfont.ttf">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/db/mysql/petclinic_db_setup_mysql.txt">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/static/resources/fonts/varela_round-webfont.ttf">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/templates/fragments/inputField.html">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/static/resources/fonts/montserrat-webfont.eot">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/templates/fragments/layout.html">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/static/resources/fonts/varela_round-webfont.eot">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/templates/fragments/selectField.html">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/db/h2/data.sql">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/templates/pets/createOrUpdateVisitForm.html">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/db/h2/schema.sql">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/templates/pets/createOrUpdatePetForm.html">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/db/hsqldb/data.sql">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/templates/vets/vetList.html">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/db/hsqldb/schema.sql">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/templates/welcome.html">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/db/postgres/data.sql">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/templates/owners/createOrUpdateOwnerForm.html">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/db/postgres/petclinic_db_setup_postgres.txt">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/templates/owners/ownerDetails.html">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/db/postgres/schema.sql">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/templates/owners/findOwners.html">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/db/mysql/data.sql">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/templates/owners/ownersList.html">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/db/mysql/schema.sql">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/templates/error.html">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/db/mysql/user.sql">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/application.properties">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/db/mysql/petclinic_db_setup_mysql.txt">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/resources/application-mysql.properties">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/templates/fragments/inputField.html">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/java/org/springframework/samples/petclinic/vet/Vet.java">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/templates/fragments/layout.html">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/java/org/springframework/samples/petclinic/vet/Specialty.java">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/templates/fragments/selectField.html">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/java/org/springframework/samples/petclinic/vet/VetController.java">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/templates/pets/createOrUpdateVisitForm.html">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/java/org/springframework/samples/petclinic/vet/VetRepository.java">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/templates/pets/createOrUpdatePetForm.html">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/java/org/springframework/samples/petclinic/vet/Vets.java">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/templates/vets/vetList.html">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/java/org/springframework/samples/petclinic/owner/Pet.java">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/templates/welcome.html">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/java/org/springframework/samples/petclinic/owner/VisitController.java">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/templates/owners/createOrUpdateOwnerForm.html">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/java/org/springframework/samples/petclinic/owner/PetTypeFormatter.java">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/templates/owners/ownerDetails.html">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/java/org/springframework/samples/petclinic/owner/OwnerRepository.java">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/templates/owners/findOwners.html">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/java/org/springframework/samples/petclinic/owner/OwnerController.java">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/templates/owners/ownersList.html">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/java/org/springframework/samples/petclinic/owner/PetTypeRepository.java">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/templates/error.html">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/java/org/springframework/samples/petclinic/owner/PetController.java">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/application.properties">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/java/org/springframework/samples/petclinic/owner/PetValidator.java">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/resources/application-mysql.properties">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/java/org/springframework/samples/petclinic/owner/Owner.java">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/java/org/springframework/samples/petclinic/vet/Vet.java">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/java/org/springframework/samples/petclinic/owner/Visit.java">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/java/org/springframework/samples/petclinic/vet/Specialty.java">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/java/org/springframework/samples/petclinic/owner/PetType.java">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/java/org/springframework/samples/petclinic/vet/VetController.java">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/java/org/springframework/samples/petclinic/PetClinicRuntimeHints.java">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/java/org/springframework/samples/petclinic/vet/VetRepository.java">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/java/org/springframework/samples/petclinic/system/WelcomeController.java">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/java/org/springframework/samples/petclinic/vet/Vets.java">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/java/org/springframework/samples/petclinic/system/CacheConfiguration.java">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/java/org/springframework/samples/petclinic/owner/Pet.java">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/java/org/springframework/samples/petclinic/system/CrashController.java">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/java/org/springframework/samples/petclinic/owner/VisitController.java">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/java/org/springframework/samples/petclinic/system/WebConfiguration.java">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/java/org/springframework/samples/petclinic/owner/PetTypeFormatter.java">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/java/org/springframework/samples/petclinic/model/BaseEntity.java">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/java/org/springframework/samples/petclinic/owner/OwnerRepository.java">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/java/org/springframework/samples/petclinic/model/Person.java">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/java/org/springframework/samples/petclinic/owner/OwnerController.java">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/java/org/springframework/samples/petclinic/model/package-info.java">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/java/org/springframework/samples/petclinic/owner/PetTypeRepository.java">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/java/org/springframework/samples/petclinic/model/NamedEntity.java">
 </file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/java/org/springframework/samples/petclinic/owner/PetController.java">
-</file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/java/org/springframework/samples/petclinic/owner/PetValidator.java">
-</file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/java/org/springframework/samples/petclinic/owner/Owner.java">
-</file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/java/org/springframework/samples/petclinic/owner/Visit.java">
-</file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/java/org/springframework/samples/petclinic/owner/PetType.java">
-</file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/java/org/springframework/samples/petclinic/PetClinicRuntimeHints.java">
-</file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/java/org/springframework/samples/petclinic/system/WelcomeController.java">
-</file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/java/org/springframework/samples/petclinic/system/CacheConfiguration.java">
-</file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/java/org/springframework/samples/petclinic/system/CrashController.java">
-</file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/java/org/springframework/samples/petclinic/system/WebConfiguration.java">
-</file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/java/org/springframework/samples/petclinic/model/BaseEntity.java">
-</file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/java/org/springframework/samples/petclinic/model/Person.java">
-</file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/java/org/springframework/samples/petclinic/model/package-info.java">
-</file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/java/org/springframework/samples/petclinic/model/NamedEntity.java">
-</file>
-<file name="/Users/alexandr-bezobrazov/dev_ops_course/r_d_petclinic/src/main/java/org/springframework/samples/petclinic/PetClinicApplication.java">
+<file name="/Users/alexandr-bezobrazov/dev_ops_course/spring-petclinic/src/main/java/org/springframework/samples/petclinic/PetClinicApplication.java">
 </file>
 </checkstyle>
